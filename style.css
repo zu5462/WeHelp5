@@ -13,8 +13,8 @@
 }
 
 p::before {
-    content: "\2003\2003";
     /*每段落加上空格*/
+    content: "\2003\2003";
 }
 
 h1 {
@@ -67,7 +67,7 @@ h2 {
 /*本文標題*/
 .main-title {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     align-self: stretch;
@@ -79,6 +79,7 @@ h2 {
 }
 
 .main-title a {
+    font-size:1em;
     margin: 0 2em;
 }
 
