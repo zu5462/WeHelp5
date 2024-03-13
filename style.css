@@ -1,0 +1,122 @@
+/*整體版面設定*/
+.wrapper {
+    /*版面置中，設定flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /*字體*/
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 300;
+    color: rgb(40, 40, 40);
+    font-size: 16px;
+}
+
+p::before {
+    content: "\2003\2003";
+    /*每段落加上空格*/
+}
+
+h1 {
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    padding: 0.2em 0;
+    margin: 0.3em 0;
+
+}
+
+h2 {
+    /*h2標題跟底線設定*/
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+    border-bottom: 1px solid rgb(150, 150, 150);
+    padding: 0.2em 0;
+    margin: 0.3em 0;
+}
+
+/*目錄設定*/
+.index {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 25%;
+}
+
+.index ul {
+    list-style-type: none;
+}
+
+.index li {
+    margin-bottom: 0.4em;
+}
+
+.index a,
+.main-title a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: rgb(100, 100, 100);
+}
+
+.index a:hover,
+.main-title a:hover {
+    color: rgb(10, 10, 10);
+}
+
+/*本文標題*/
+.main-title {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: stretch;
+}
+
+.main-title h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.main-title a {
+    margin: 0 2em;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/*本文設定*/
+.article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 2;
+    margin: 0 2em;
+}
+
+/*設定RWD，手機版面無目錄*/
+@media screen {
+    .index {
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .index {
+        display: flex;
+        width: 20%;
+    }
+
+    .article {
+        width: 70%;
+    }
+}
